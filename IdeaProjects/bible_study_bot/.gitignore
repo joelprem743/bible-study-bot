@@ -1,3 +1,5 @@
+# Create proper .gitignore
+cat > .gitignore << 'EOF'
 # Python
 __pycache__/
 *.pyc
@@ -26,8 +28,16 @@ vmlogs/
 # Streamlit
 .streamlit/secrets.toml
 
-# Parent directories (important!)
-../venv/
-../vmlogs/
+# Parent directories - CRITICAL!
+../
+../
 ../../venv/
 ../../vmlogs/
+../../useruid.ini
+*.ini
+
+# Project specific
+data/
+*.iml
+config.py
+EOF
