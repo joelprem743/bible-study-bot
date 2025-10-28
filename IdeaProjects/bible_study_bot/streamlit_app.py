@@ -1,11 +1,9 @@
 import streamlit as st
-import sys
-import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src', 'main', 'python'))
+st.set_page_config(page_title="Bible Study Bot", page_icon="📖")
+st.title("Bible Study Bot 🤖")
+st.write("Welcome to your AI-powered Bible study assistant!")
 
-try:
-    from enhanced_ui import main
-    main()
-except Exception as e:
-    st.error(f"Error: {e}")
+# Simple version without complex imports
+st.success("App deployed successfully!")
+st.info("Chat features and Bible search coming soon...")
